@@ -1,0 +1,44 @@
+{"id": "single-dubu", "type": "single", "input": {"ingredients": ["두부"]}, "relevant": {"uses_any": ["두부"]}}
+{"id": "single-milk", "type": "single", "input": {"ingredients": ["우유"]}, "relevant": {"uses_any": ["우유"]}}
+{"id": "single-egg", "type": "single", "input": {"ingredients": ["달걀"]}, "relevant": {"uses_any": ["달걀"]}}
+{"id": "single-potato", "type": "single", "input": {"ingredients": ["감자"]}, "relevant": {"uses_any": ["감자"]}}
+{"id": "single-zucchini", "type": "single", "input": {"ingredients": ["애호박"]}, "relevant": {"uses_any": ["애호박"]}}
+{"id": "single-spinach", "type": "single", "input": {"ingredients": ["시금치"]}, "relevant": {"uses_any": ["시금치"]}}
+{"id": "single-chicken-breast", "type": "single", "input": {"ingredients": ["닭가슴살"]}, "relevant": {"uses_any": ["닭가슴살"]}}
+{"id": "single-tomato", "type": "single", "input": {"ingredients": ["토마토"]}, "relevant": {"uses_any": ["토마토"]}}
+{"id": "single-shiitake", "type": "single", "input": {"ingredients": ["표고버섯"]}, "relevant": {"uses_any": ["표고버섯"]}}
+{"id": "single-shrimp", "type": "single", "input": {"ingredients": ["새우"]}, "relevant": {"uses_any": ["새우"]}, "note": "칵테일새우 등 끝이 같은 이름도 맞아야 함"}
+{"id": "single-kimchi", "type": "single", "input": {"ingredients": ["김치"]}, "relevant": {"uses_any": ["김치"]}}
+{"id": "single-bean-sprout", "type": "single", "input": {"ingredients": ["콩나물"]}, "relevant": {"uses_any": ["콩나물"]}, "note": "레시피가 적은(21개) 재료"}
+{"id": "alias-pa", "type": "alias", "input": {"ingredients": ["파"]}, "relevant": {"uses_any": ["대파"]}, "note": "카탈로그 별칭 파 → 대파. 양파·쪽파는 아님"}
+{"id": "alias-gyeran", "type": "alias", "input": {"ingredients": ["계란"]}, "relevant": {"uses_any": ["달걀"]}, "note": "계란 ↔ 달걀 (레시피는 대부분 '달걀')"}
+{"id": "alias-hobak", "type": "alias", "input": {"ingredients": ["호박"]}, "relevant": {"uses_any": ["애호박"]}, "note": "카탈로그 별칭 호박 → 애호박"}
+{"id": "alias-gochu", "type": "alias", "input": {"ingredients": ["고추"]}, "relevant": {"uses_any": ["풋고추", "청고추", "홍고추", "청양고추"]}, "note": "고추장은 아님"}
+{"id": "alias-beef", "type": "alias", "input": {"ingredients": ["쇠고기"]}, "relevant": {"uses_any": ["소고기", "쇠고기"]}}
+{"id": "alias-spaced", "type": "alias", "input": {"ingredients": ["닭 가슴살"]}, "relevant": {"uses_any": ["닭가슴살"]}, "note": "띄어쓰기가 다른 입력"}
+{"id": "multi-dubu-pa-zucchini", "type": "multi", "input": {"ingredients": ["두부", "대파", "애호박"]}, "relevant": {"uses_any": ["두부", "대파", "애호박"]}}
+{"id": "multi-milk-egg-spinach", "type": "multi", "input": {"ingredients": ["우유", "달걀", "시금치"]}, "relevant": {"uses_any": ["우유", "달걀", "시금치"]}}
+{"id": "multi-chicken-broccoli-paprika", "type": "multi", "input": {"ingredients": ["닭가슴살", "브로콜리", "파프리카"]}, "relevant": {"uses_any": ["닭가슴살", "브로콜리", "파프리카"]}}
+{"id": "multi-potato-onion-carrot", "type": "multi", "input": {"ingredients": ["감자", "양파", "당근"]}, "relevant": {"uses_any": ["감자", "양파", "당근"]}}
+{"id": "multi-tomato-egg", "type": "multi", "input": {"ingredients": ["토마토", "달걀"]}, "relevant": {"uses_any": ["토마토", "달걀"]}}
+{"id": "multi-pork-kimchi", "type": "multi", "input": {"ingredients": ["돼지고기", "김치"]}, "relevant": {"uses_any": ["돼지고기", "김치"]}}
+{"id": "multi-five-veg", "type": "multi", "input": {"ingredients": ["깻잎", "오이", "무", "사과", "부추"]}, "relevant": {"uses_any": ["깻잎", "오이", "무", "사과", "부추"]}, "note": "임박 재료가 5개일 때 재료마다 후보가 나오는지"}
+{"id": "multi-mushrooms", "type": "multi", "input": {"ingredients": ["새송이버섯", "팽이버섯", "양배추"]}, "relevant": {"uses_any": ["새송이버섯", "팽이버섯", "양배추"]}}
+{"id": "multi-rare-common", "type": "multi", "input": {"ingredients": ["콩나물", "양파"]}, "relevant": {"uses_any": ["콩나물", "양파"]}, "note": "흔한 재료(양파 468)가 드문 재료(콩나물 21)를 덮지 않는지"}
+{"id": "multi-salmon-lemon-asparagus", "type": "multi", "input": {"ingredients": ["연어", "레몬", "아스파라거스"]}, "relevant": {"uses_any": ["연어", "레몬", "아스파라거스"]}}
+{"id": "tag-dubu-protein", "type": "tag", "input": {"ingredients": ["두부"], "tags": ["고단백"]}, "relevant": {"uses_any": ["두부"], "tags_all": ["고단백"]}}
+{"id": "tag-chicken-diet", "type": "tag", "input": {"ingredients": ["닭가슴살"], "tags": ["다이어트"]}, "relevant": {"uses_any": ["닭가슴살"], "tags_all": ["다이어트"]}}
+{"id": "tag-pork-spicy", "type": "tag", "input": {"ingredients": ["돼지고기"], "tags": ["매운맛"]}, "relevant": {"uses_any": ["돼지고기"], "tags_all": ["매운맛"]}}
+{"id": "tag-only-protein", "type": "tag", "input": {"ingredients": [], "tags": ["고단백"]}, "relevant": {"tags_all": ["고단백"]}, "note": "재료 없이 태그만 (식단 목표 등)"}
+{"id": "tag-sweetpotato-dessert", "type": "tag", "input": {"ingredients": ["고구마"], "tags": ["후식"]}, "relevant": {"uses_any": ["고구마"], "tags_all": ["후식"]}}
+{"id": "constraint-egg-busy", "type": "constraint", "input": {"ingredients": ["달걀"], "max_minutes": 15}, "relevant": {"uses_any": ["달걀"], "max_minutes": 15}, "note": "바쁜 날 (BUSY_MAX_MINUTES)"}
+{"id": "constraint-dubu-busy", "type": "constraint", "input": {"ingredients": ["두부", "대파"], "max_minutes": 15}, "relevant": {"uses_any": ["두부", "대파"], "max_minutes": 15}}
+{"id": "constraint-egg-milk-allergy", "type": "constraint", "input": {"ingredients": ["달걀", "시금치"]}, "user": {"allergies": ["우유"]}, "relevant": {"uses_any": ["달걀", "시금치"]}, "note": "우유 알레르기: 결과에 우유·유제품이 있으면 안전 위반"}
+{"id": "constraint-shrimp-allergy", "type": "constraint", "input": {"ingredients": ["애호박", "양파"]}, "user": {"allergies": ["갑각류"]}, "relevant": {"uses_any": ["애호박", "양파"]}, "note": "갑각류 → 새우·게 제외"}
+{"id": "constraint-have-ratio", "type": "constraint", "input": {"ingredients": ["두부"]}, "user": {"have": ["대파", "양파", "달걀", "애호박", "된장"]}, "relevant": {"uses_any": ["두부"]}, "note": "재고가 있을 때 보유 비율 점수가 섞여도 두부 레시피가 나오는지"}
+{"id": "free-spicy-stew", "type": "free_text", "query": "얼큰한 국물 요리 먹고 싶어", "input": {"ingredients": ["두부", "애호박"], "tags": ["매운맛"]}, "relevant": {"uses_any": ["두부", "애호박"], "tags_all": ["국&찌개"]}, "note": "지금 검색은 '국물'을 전달할 방법이 없음 (1단계 query 칸으로 개선 목표)"}
+{"id": "free-kids-snack", "type": "free_text", "query": "아이 간식으로 고구마 쓰는 거", "input": {"ingredients": ["고구마"]}, "relevant": {"uses_any": ["고구마"], "tags_all": ["후식"]}}
+{"id": "free-rice-bowl", "type": "free_text", "query": "한 그릇 밥 요리로 닭고기 쓰고 싶어", "input": {"ingredients": ["닭고기"]}, "relevant": {"uses_any": ["닭고기", "닭가슴살"], "tags_any": ["밥", "일품"]}}
+{"id": "free-steamed", "type": "free_text", "query": "기름 안 쓰고 쪄서 만드는 달걀 요리", "input": {"ingredients": ["달걀"]}, "relevant": {"uses_any": ["달걀"], "tags_all": ["찌기"]}}
+{"id": "free-stirfry", "type": "free_text", "query": "돼지고기 볶음 요리", "input": {"ingredients": ["돼지고기"]}, "relevant": {"uses_any": ["돼지고기"], "tags_all": ["볶기"]}}
+{"id": "free-soup-light", "type": "free_text", "query": "맵지 않은 맑은 국 끓이고 싶어, 무 있어", "input": {"ingredients": ["무"]}, "relevant": {"uses_any": ["무"], "tags_all": ["국&찌개"], "tags_none": ["매운맛"]}}
