@@ -1,22 +1,7 @@
 # FridgeManager_Web
-냉장고를 부탁해 — 냉장고 재료·유통기한·내 일정과 취향을 보고, **버릴 뻔한 재료부터 쓰는 레시피**를 추천하는 냉장고 에이전트.
-기획은 [PLAN.md](PLAN.md), 팀 작업 방식은 PLAN.md 11장을 보세요.
+냉장고를 부탁해 — 냉장고 재료·유통기한·내 일정과 취향을 보고, **버릴 뻔한 재료부터 쓰는 레시피**를 추천하는 냉장고 에이전트
 
 ![홈 화면](docs/screenshots/01_home.png)
-
-## 지금 상태 (2026-11-26)
-기획안의 **Phase 1~6 모두 완료, AWS EC2에 배포되어 동작 중**이에요. Phase 7(Google Calendar 연동·이메일/푸시 알림)은 하지 않기로 했어요.
-
-| Phase | 내용 | 담당 | 상태 |
-|---|---|---|---|
-| 0 | 프로젝트 세팅, 로그인, DB | A | ✅ |
-| 1 | 재고 + 유통기한 | A | ✅ |
-| 2 | 영수증·냉장고 사진으로 재료 등록 | A | ✅ |
-| 3 | 레시피 검색 (식품안전나라 1,151개, 임베딩) + 홈 추천 카드 | B | ✅ |
-| 4 | 에이전트 채팅, 재고 빼기, 취향·알레르기 기억 | A | ✅ |
-| 5 | 달력·일정, 주간 식단, 장보기 목록 | A | ✅ |
-| 6 | 대시보드, 요리 평가, 피드백 학습 | A | ✅ |
-| 7 | Google Calendar 연동, 알림 | – | ❌ 하지 않음 |
 
 ## 주요 기능
 | 화면 | 할 수 있는 것 |
@@ -89,24 +74,6 @@
 - **사용자 데이터 분리**: RLS 대신 모든 SQL 에 `where user_id = %s`. DB 는 기존 RDS 의 `fridge` 스키마 + 앱 전용 계정(다른 앱 데이터에 접근 불가).
 - **비밀값**: `.env` 는 git 에 올리지 않아요 (`.gitignore`). 견본은 `.env.example`.
 
-## 알려진 한계
-- **HTTP 만 지원** — 실제 사용자를 받으려면 HTTPS 가 필요해요.
-- **새로고침하면 로그아웃** (Streamlit 세션이 탭 단위).
-- **영수증 인식(Haiku)** 은 비슷한 글자를 잘못 읽을 수 있어요 (시험에서 '고수' → '고추'). 확인 표에서 고쳐 주세요.
-- 레시피가 단위를 g 로 적고 재고가 '개'면 재고 빼기 양을 추정해요 (개수 단위는 1개, 그 밖은 0 → 확인 표에서 고치기).
-
-## 바뀐 결정 기록
-| 처음 | 지금 | 이유 |
-|---|---|---|
-| Next.js + TypeScript | **Python + Streamlit** | 팀이 아는 언어로 코드를 읽고 고칠 수 있게 |
-| Supabase | **기존 AWS RDS PostgreSQL** | 이미 있는 DB 재사용, pgvector 지원 |
-| Anthropic API 키 | **AWS Bedrock** | EC2 서버 역할로 인증 |
-| Phase 2·4·5·6 일부 B 담당 | **A 가 맡음** | Phase 3 가 길어져서 |
-| Phase 7 | **하지 않음** | |
-
-## 작업 흐름
-브랜치(`phaseN-…`/`fix-…`) → 구현 + 테스트 → 실제 Bedrock·RDS 로 확인 → 커밋·push → PR → `main` 합치기 → EC2 배포(아래) → 서버에서 다시 확인 → 브랜치 정리. **배포는 `main` 에서만.**
-
 ## 스택
 Python 3.9+ · Streamlit · AWS RDS PostgreSQL 18 + pgvector (`fridge` 스키마) · psycopg 3 · bcrypt · Claude on AWS Bedrock · Titan V2 임베딩 · streamlit-calendar · Altair · pytest
 배포: AWS EC2 (Python 3.12, systemd `deploy/fridge-app.service`, 포트 8501)
@@ -137,22 +104,6 @@ Python 3.9+ · Streamlit · AWS RDS PostgreSQL 18 + pgvector (`fridge` 스키마
    ```bash
    streamlit run app.py
    ```
-
-## 레시피 넣기 (Phase 3)
-식품안전나라 레시피 약 1,150개를 임베딩(Amazon Titan Text Embeddings V2, Bedrock)과 함께 `recipes` 표에 넣어요.
-먼저 `python scripts/migrate.py`로 `db/0003_recipes.sql`을 실행해 두세요.
-
-- **나눠서 할 때** (임베딩 만드는 사람과 DB에 넣는 사람이 다를 때)
-  ```bash
-  # 1) 임베딩 만드는 사람: API → 변환 → 임베딩 → 파일 (DB 필요 없음)
-  #    .env: RECIPE_API_KEY, BEDROCK_REGION(Titan V2가 있는 리전), AWS_PROFILE
-  python scripts/seed_recipes.py --dry-run --out db/seed/recipes_seed.jsonl.gz
-  # 2) DB에 넣는 사람: 파일 → DB (API 키·Bedrock 필요 없음, 로컬은 터널 먼저)
-  python scripts/seed_recipes.py --load-file db/seed/recipes_seed.jsonl.gz
-  ```
-- **한 번에 할 때**: `python scripts/seed_recipes.py`
-- 여러 번 실행해도 레시피 수는 늘지 않아요 (`source_id`로 덮어씀).
-- 검색할 때도 같은 모델로 검색어를 임베딩해요. 앱이 도는 곳(로컬은 AWS 로그인, EC2는 서버 역할의 `bedrock:InvokeModel` 권한)과 `.env`의 `BEDROCK_REGION`이 필요해요. Bedrock을 못 부르면 재료 이름 글자 검색으로 대신해요.
 
 ## 테스트
 ```bash
