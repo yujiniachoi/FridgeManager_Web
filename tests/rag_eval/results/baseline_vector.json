@@ -1,0 +1,1460 @@
+{
+ "meta": {
+  "mode": "vector",
+  "backend": "local",
+  "cases_file": "tests/rag_eval/cases.jsonl",
+  "embed_model": "amazon.titan-embed-text-v2:0",
+  "at": "2026-11-27T08:02:43+00:00"
+ },
+ "summary": {
+  "all": {
+   "cases": 44,
+   "n": 18.0455,
+   "zero": 0.0227,
+   "hit@3": 0.9773,
+   "p@3": 0.8864,
+   "p@10": 0.8535,
+   "cov@10": 1.0,
+   "unsafe": 0,
+   "ms": 279.5159
+  },
+  "single": {
+   "cases": 12,
+   "n": 18.5,
+   "zero": 0.0,
+   "hit@3": 1.0,
+   "p@3": 1.0,
+   "p@10": 0.95,
+   "unsafe": 0,
+   "ms": 303.1333
+  },
+  "alias": {
+   "cases": 6,
+   "n": 9.3333,
+   "zero": 0.1667,
+   "hit@3": 0.8333,
+   "p@3": 0.8333,
+   "p@10": 0.7,
+   "unsafe": 0,
+   "ms": 296.55
+  },
+  "multi": {
+   "cases": 10,
+   "n": 22.3,
+   "zero": 0.0,
+   "hit@3": 1.0,
+   "p@3": 1.0,
+   "p@10": 1.0,
+   "cov@10": 1.0,
+   "unsafe": 0,
+   "ms": 287.46
+  },
+  "tag": {
+   "cases": 5,
+   "n": 18.2,
+   "zero": 0.0,
+   "hit@3": 1.0,
+   "p@3": 1.0,
+   "p@10": 0.94,
+   "unsafe": 0,
+   "ms": 275.54
+  },
+  "constraint": {
+   "cases": 5,
+   "n": 21.0,
+   "zero": 0.0,
+   "hit@3": 1.0,
+   "p@3": 1.0,
+   "p@10": 1.0,
+   "cov@10": 1.0,
+   "unsafe": 0,
+   "ms": 215.62
+  },
+  "free_text": {
+   "cases": 6,
+   "n": 16.1667,
+   "zero": 0.0,
+   "hit@3": 1.0,
+   "p@3": 0.3333,
+   "p@10": 0.3759,
+   "cov@10": 1.0,
+   "unsafe": 0,
+   "ms": 258.5667
+  }
+ },
+ "cases": [
+  {
+   "id": "single-dubu",
+   "type": "single",
+   "n_relevant": 150,
+   "metrics": {
+    "n": 28,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 569.3
+   },
+   "top3": [
+    "두부구이, 버섯소스",
+    "두부된장무침",
+    "두부양갱"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-milk",
+   "type": "single",
+   "n_relevant": 131,
+   "metrics": {
+    "n": 14,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 295.8
+   },
+   "top3": [
+    "감자주스",
+    "자두 라떼",
+    "군고구마 라떼"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-egg",
+   "type": "single",
+   "n_relevant": 192,
+   "metrics": {
+    "n": 22,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 327.5
+   },
+   "top3": [
+    "바나나를 감싼 일본식 달걀말이",
+    "유부 달걀찜",
+    "토마토소스 달걀볶음"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-potato",
+   "type": "single",
+   "n_relevant": 95,
+   "metrics": {
+    "n": 15,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 281.9
+   },
+   "top3": [
+    "감자주스",
+    "야채칩",
+    "곤약 감자조림"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-zucchini",
+   "type": "single",
+   "n_relevant": 81,
+   "metrics": {
+    "n": 13,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 261.7
+   },
+   "top3": [
+    "호박만두",
+    "애호박들깨볶음",
+    "먹골배 카레주먹밥"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-spinach",
+   "type": "single",
+   "n_relevant": 63,
+   "metrics": {
+    "n": 19,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 264.8
+   },
+   "top3": [
+    "시금치 배 미음",
+    "시금치들깨무침",
+    "시금치비트무침"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-chicken-breast",
+   "type": "single",
+   "n_relevant": 54,
+   "metrics": {
+    "n": 20,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 282.6
+   },
+   "top3": [
+    "커리향이 들어간 치킨샐러드 샌드위치",
+    "구운 닭고기 샐러드와 저나트륨 과일 드레싱",
+    "닭가슴살말이"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-tomato",
+   "type": "single",
+   "n_relevant": 197,
+   "metrics": {
+    "n": 30,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 276.0
+   },
+   "top3": [
+    "토마토주스를곁들인컵토마토",
+    "시금치토마토무침",
+    "배숙구이"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-shiitake",
+   "type": "single",
+   "n_relevant": 111,
+   "metrics": {
+    "n": 21,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 277.1
+   },
+   "top3": [
+    "버섯 참치 무른밥",
+    "표고버섯쇠고기찜",
+    "표고버섯 청경채국"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-shrimp",
+   "type": "single",
+   "n_relevant": 96,
+   "metrics": {
+    "n": 25,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 239.7
+   },
+   "top3": [
+    "새우아욱죽",
+    "사과 새우 북엇국",
+    "새우 두부 계란찜"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-kimchi",
+   "type": "single",
+   "n_relevant": 31,
+   "metrics": {
+    "n": 11,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 287.7
+   },
+   "top3": [
+    "백김치콩비지찌개",
+    "달래두부김치무침",
+    "김치 고구마밥"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "single-bean-sprout",
+   "type": "single",
+   "n_relevant": 21,
+   "metrics": {
+    "n": 4,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 0.4,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 273.5
+   },
+   "top3": [
+    "얼큰 콩나물 수제비",
+    "콩나물부추볶음",
+    "죽순콩나물밥"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "alias-pa",
+   "type": "alias",
+   "n_relevant": 207,
+   "metrics": {
+    "n": 11,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 244.0
+   },
+   "top3": [
+    "무대하무침",
+    "맑은육개장",
+    "참외깍두기"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "alias-gyeran",
+   "type": "alias",
+   "n_relevant": 192,
+   "metrics": {
+    "n": 14,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 261.6
+   },
+   "top3": [
+    "일본식 계란말이",
+    "구운 주먹밥",
+    "연근고구마샌드위치"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "alias-hobak",
+   "type": "alias",
+   "n_relevant": 81,
+   "metrics": {
+    "n": 7,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 0.7,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 325.3
+   },
+   "top3": [
+    "호박만두",
+    "애호박들깨볶음",
+    "해물애호박 전병말이"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "alias-gochu",
+   "type": "alias",
+   "n_relevant": 208,
+   "metrics": {
+    "n": 0,
+    "zero": 1,
+    "hit@3": 0,
+    "p@3": 0.0,
+    "p@10": 0.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 250.9
+   },
+   "top3": [],
+   "top10_relevant": []
+  },
+  {
+   "id": "alias-beef",
+   "type": "alias",
+   "n_relevant": 82,
+   "metrics": {
+    "n": 5,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 0.5,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 357.7
+   },
+   "top3": [
+    "소고기 무국",
+    "참치 쇠고기 양상추 쌈",
+    "쇠고기 채소볶음"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "alias-spaced",
+   "type": "alias",
+   "n_relevant": 54,
+   "metrics": {
+    "n": 19,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 339.8
+   },
+   "top3": [
+    "닭가슴살카나페",
+    "두부말이찜",
+    "커리향이 들어간 치킨샐러드 샌드위치"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-dubu-pa-zucchini",
+   "type": "multi",
+   "n_relevant": 360,
+   "metrics": {
+    "n": 29,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 278.5
+   },
+   "top3": [
+    "두부청국장죽",
+    "된장 두부찌개",
+    "카레소스를 얹은 두부 스테이크"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-milk-egg-spinach",
+   "type": "multi",
+   "n_relevant": 330,
+   "metrics": {
+    "n": 20,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 267.8
+   },
+   "top3": [
+    "바나나 속 달걀빵",
+    "시금치크림치즈 빵",
+    "시금치 우유 소스와 그린매쉬드포테이토"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-chicken-broccoli-paprika",
+   "type": "multi",
+   "n_relevant": 225,
+   "metrics": {
+    "n": 21,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 318.4
+   },
+   "top3": [
+    "딸기소스닭가슴살채소무침",
+    "닭가슴살 브로콜리 만두",
+    "삼계선"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-potato-onion-carrot",
+   "type": "multi",
+   "n_relevant": 600,
+   "metrics": {
+    "n": 29,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 283.1
+   },
+   "top3": [
+    "치즈감자크로켓",
+    "근채류주먹밥",
+    "황태포당면국수"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-tomato-egg",
+   "type": "multi",
+   "n_relevant": 356,
+   "metrics": {
+    "n": 29,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 276.6
+   },
+   "top3": [
+    "토마토 비빔국수",
+    "이태리튀밥",
+    "바나나를 감싼 일본식 달걀말이"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-pork-kimchi",
+   "type": "multi",
+   "n_relevant": 90,
+   "metrics": {
+    "n": 14,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 302.9
+   },
+   "top3": [
+    "완자김치찌개",
+    "묵은지가지말이",
+    "백김치콩비지찌개"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-five-veg",
+   "type": "multi",
+   "n_relevant": 336,
+   "metrics": {
+    "n": 25,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 269.7
+   },
+   "top3": [
+    "두부샐러드 메밀김밥",
+    "순두부 사과 소스 오이무침",
+    "유부초절임"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-mushrooms",
+   "type": "multi",
+   "n_relevant": 160,
+   "metrics": {
+    "n": 20,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 286.6
+   },
+   "top3": [
+    "양배추버섯말이",
+    "팽이버섯 야채볶음",
+    "버섯배추말이"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-rare-common",
+   "type": "multi",
+   "n_relevant": 509,
+   "metrics": {
+    "n": 21,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 327.0
+   },
+   "top3": [
+    "콩나물부추볶음",
+    "양파홍초절임",
+    "얼큰 콩나물 수제비"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "multi-salmon-lemon-asparagus",
+   "type": "multi",
+   "n_relevant": 97,
+   "metrics": {
+    "n": 15,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 264.0
+   },
+   "top3": [
+    "훈제연어롤",
+    "연어샐러드",
+    "리코타소스 연어샐러드"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "tag-dubu-protein",
+   "type": "tag",
+   "n_relevant": 44,
+   "metrics": {
+    "n": 19,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 252.2
+   },
+   "top3": [
+    "청국장 두부 검은깨 냉스프",
+    "연두부 카프레제",
+    "두부된장무침"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "tag-chicken-diet",
+   "type": "tag",
+   "n_relevant": 13,
+   "metrics": {
+    "n": 15,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 264.9
+   },
+   "top3": [
+    "닭가슴살 브로콜리 만두",
+    "치킨 쇠고기 땅콩소스 꼬치",
+    "치킨 버거 스테이크"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "tag-pork-spicy",
+   "type": "tag",
+   "n_relevant": 14,
+   "metrics": {
+    "n": 7,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 0.7,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 330.1
+   },
+   "top3": [
+    "오색볶음면",
+    "단호박제육볶음",
+    "돼지고기 포두부 파스타"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "tag-only-protein",
+   "type": "tag",
+   "n_relevant": 316,
+   "metrics": {
+    "n": 30,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 303.3
+   },
+   "top3": [
+    "장어찜",
+    "참치두부 주먹밥",
+    "새우보리죽 고등어스테이크"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "tag-sweetpotato-dessert",
+   "type": "tag",
+   "n_relevant": 22,
+   "metrics": {
+    "n": 20,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 227.2
+   },
+   "top3": [
+    "군고구마 라떼",
+    "자색고구마찹쌀푸딩",
+    "고구마란"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "constraint-egg-busy",
+   "type": "constraint",
+   "n_relevant": 16,
+   "metrics": {
+    "n": 12,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 140.7
+   },
+   "top3": [
+    "노른자크림 육회샐러드",
+    "무오색쌈",
+    "배추 달걀볶음"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "constraint-dubu-busy",
+   "type": "constraint",
+   "n_relevant": 39,
+   "metrics": {
+    "n": 17,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 260.5
+   },
+   "top3": [
+    "두부해물완자",
+    "연두부 카프레제",
+    "두부된장무침"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "constraint-egg-milk-allergy",
+   "type": "constraint",
+   "n_relevant": 146,
+   "metrics": {
+    "n": 24,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 275.4
+   },
+   "top3": [
+    "시금치 볶음 쌀국수",
+    "꽃밥",
+    "바나나를 감싼 일본식 달걀말이"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "constraint-shrimp-allergy",
+   "type": "constraint",
+   "n_relevant": 439,
+   "metrics": {
+    "n": 24,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 258.5
+   },
+   "top3": [
+    "애호박장떡말이밥",
+    "옥음밥",
+    "토마토라면"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "constraint-have-ratio",
+   "type": "constraint",
+   "n_relevant": 150,
+   "metrics": {
+    "n": 28,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 1.0,
+    "p@10": 1.0,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 143.0
+   },
+   "top3": [
+    "두부된장무침",
+    "두부선과 저나트륨 겨자 간장소스",
+    "두부해물완자"
+   ],
+   "top10_relevant": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "free-spicy-stew",
+   "type": "free_text",
+   "n_relevant": 45,
+   "metrics": {
+    "n": 17,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 0.3333,
+    "p@10": 0.4,
+    "cov@10": 1.0,
+    "unsafe": 0,
+    "ms": 319.7
+   },
+   "top3": [
+    "두부곤약조림",
+    "두부 비빔호박쌈",
+    "쑥갓부대찌개"
+   ],
+   "top10_relevant": [
+    false,
+    false,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "id": "free-kids-snack",
+   "type": "free_text",
+   "n_relevant": 22,
+   "metrics": {
+    "n": 25,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 0.3333,
+    "p@10": 0.5,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 295.8
+   },
+   "top3": [
+    "고구마 빠스",
+    "군고구마 라떼",
+    "호박 고구마 스프"
+   ],
+   "top10_relevant": [
+    false,
+    true,
+    false,
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false
+   ]
+  },
+  {
+   "id": "free-rice-bowl",
+   "type": "free_text",
+   "n_relevant": 33,
+   "metrics": {
+    "n": 12,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 0.3333,
+    "p@10": 0.4,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 269.4
+   },
+   "top3": [
+    "닭가슴살 스테이크",
+    "닭순대",
+    "음메꼬꼬돌돌"
+   ],
+   "top10_relevant": [
+    true,
+    false,
+    false,
+    true,
+    true,
+    false,
+    true,
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "id": "free-steamed",
+   "type": "free_text",
+   "n_relevant": 16,
+   "metrics": {
+    "n": 22,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 0.3333,
+    "p@10": 0.2,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 131.5
+   },
+   "top3": [
+    "바나나를 감싼 일본식 달걀말이",
+    "유부 달걀찜",
+    "토마토소스 달걀볶음"
+   ],
+   "top10_relevant": [
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true
+   ]
+  },
+  {
+   "id": "free-stirfry",
+   "type": "free_text",
+   "n_relevant": 9,
+   "metrics": {
+    "n": 14,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 0.3333,
+    "p@10": 0.5556,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 279.3
+   },
+   "top3": [
+    "가지 탕수육",
+    "퓨전떡갈비",
+    "고추잡채"
+   ],
+   "top10_relevant": [
+    false,
+    false,
+    true,
+    true,
+    false,
+    false,
+    true,
+    false,
+    true,
+    true
+   ]
+  },
+  {
+   "id": "free-soup-light",
+   "type": "free_text",
+   "n_relevant": 16,
+   "metrics": {
+    "n": 7,
+    "zero": 0,
+    "hit@3": 1,
+    "p@3": 0.3333,
+    "p@10": 0.2,
+    "cov@10": null,
+    "unsafe": 0,
+    "ms": 255.7
+   },
+   "top3": [
+    "무대하무침",
+    "버섯 참치 무른밥",
+    "소고기 무국"
+   ],
+   "top10_relevant": [
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    true
+   ]
+  }
+ ]
+}
